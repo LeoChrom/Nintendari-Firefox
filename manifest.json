@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Magici nintendari",
+    "description": "La tua community preferita a portata di mano!",
+    "version": "0.0.1",
+    "icons": {
+      "64": "logo.png"
+    },
+    "permissions": ["tabs", "contextMenus", "activeTab"],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "leochromlabs@xgbfh.onmicrosoft.com"
+      }
+    },
+    "content_scripts": [{
+        "matches":["*://*.sites.google.com/view/nintendari"],
+        "js":["app.js"]
+    }],
+    "browser_action": {
+    "default_popup": "popup.html"
+  }
+  }
